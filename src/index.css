@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+* {
+    user-select: none;
+}
+
+@theme {
+    /* تعريف الحركة المخصصة باستخدام متغيرات CSS */
+    --animation-gradient-xy: gradient-xy 15s ease infinite;
+
+    /* تعريف الـ Keyframes للحركة */
+    --keyframes-gradient-xy: {
+        '0%, 100%': {
+            'background-size': '400% 400%',
+                'background-position': 'left center',
+        }
+
+        ,
+        '50%': {
+            'background-size': '200% 200%',
+                'background-position': 'right center',
+        }
+    }
+
+}
+
+.dark  {
+    background: linear-gradient(135deg, #0f172a, #334155, #0f172a);
+}
