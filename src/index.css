@@ -27,3 +27,7 @@
 .dark  {
     background: linear-gradient(135deg, #0f172a, #334155, #0f172a);
 }
+
+.dark-1  {
+    background: linear-gradient(135deg, #0f172a, #1e293b, #334155, #0f172a);
+}
