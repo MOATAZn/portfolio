@@ -1,14 +1,16 @@
 @import "tailwindcss";
 
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+
 * {
     user-select: none;
 }
 
 @theme {
-    /* تعريف الحركة المخصصة باستخدام متغيرات CSS */
     --animation-gradient-xy: gradient-xy 15s ease infinite;
 
-    /* تعريف الـ Keyframes للحركة */
     --keyframes-gradient-xy: {
         '0%, 100%': {
             'background-size': '400% 400%',
@@ -24,10 +26,18 @@
 
 }
 
-.dark  {
+.dark {
     background: linear-gradient(135deg, #0f172a, #334155, #0f172a);
 }
 
-.dark-1  {
+.dark-1 {
     background: linear-gradient(135deg, #0f172a, #1e293b, #334155, #0f172a);
+}
+
+.dark-2 {
+    background: linear-gradient(135deg, #0f172a, #1c2638, #2a384b, #0f172a);
+}
+
+.dark-3{
+    background: linear-gradient(135deg, #0f172a, #243246, #334155, #0f172a);
 }
