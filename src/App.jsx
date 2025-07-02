@@ -19,7 +19,6 @@ export  function App() {
         <Projects />
         <Contact />
       </main>
-      <Footer />
     </div>
   );
 }

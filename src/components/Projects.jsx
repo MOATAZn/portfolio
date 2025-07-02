@@ -98,7 +98,7 @@ export default function Projects() {
           className="text-3xl md:text-4xl font-bold text-center mb-16 text-slate-800 dark:text-white"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: false, amount: 0.5 }}
           transition={{ duration: 0.5 }}
         >
           My Projects
@@ -109,7 +109,7 @@ export default function Projects() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: false, amount: 0.1 }}
         >
           {projectsData.map((project) => (
             <motion.div
@@ -117,6 +117,7 @@ export default function Projects() {
               className="group relative bg-slate-50 dark:bg-slate-800 rounded-xl shadow-md border border-slate-200 dark:border-slate-700 overflow-hidden"
               variants={itemVariants}
               whileHover={{ y: -8 }}
+              viewport={{ once: false, amount: 0.1 }}
               transition={{ duration: 0.3 }}
             >
               <ProjectImageSlider images={project.images} />

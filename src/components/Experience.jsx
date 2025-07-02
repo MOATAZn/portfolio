@@ -45,7 +45,6 @@ const experienceData = [
 ];
 
 
-// The icon component is now also responsive
 const TimelineIcon = ({ index }) => {
     const isLeft = index % 2 !== 0;
     return (
@@ -62,20 +61,17 @@ const TimelineIcon = ({ index }) => {
 };
 
 
-// The ExperienceItem component with responsive logic
 const ExperienceItem = ({ details, index }) => {
-    const isLeft = index % 2 !== 0; // Odd items are on the left (on desktop)
+    const isLeft = index % 2 !== 0; 
 
     return (
-        // On mobile, every item has a left margin. On desktop, this is reset.
         <li className="relative mb-10 ml-10 md:ml-0">
             <TimelineIcon index={index} />
             <motion.div
                 initial={{ opacity: 0, x: isLeft ? -50 : 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
+                viewport={{ once: false, amount: 0.3 }}
                 transition={{ duration: 0.6 }}
-                // On mobile, cards are full-width. On desktop, they alternate and take up ~45% width.
                 className={`p-6 bg-white dark:bg-slate-800 rounded-lg shadow-md border border-slate-200 dark:border-slate-700 w-full 
                     md:w-[45%] 
                     ${isLeft ? 'md:mr-auto' : 'md:ml-auto'}
@@ -109,14 +105,13 @@ export default function Experience() {
           className="text-3xl md:text-4xl font-bold text-center mb-16 text-slate-800 dark:text-white"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: false, amount: 0.5 }}
           transition={{ duration: 0.5 }}
         >
           Work Experience
         </motion.h2>
 
         <div className="relative mx-auto">
-          {/* The timeline line is now responsive */}
           <div className="absolute top-0 w-0.5 h-full bg-slate-200 
             left-4 -translate-x-1/2 
             md:left-1/2 md:-translate-x-1/2">

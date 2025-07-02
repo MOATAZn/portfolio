@@ -43,14 +43,14 @@ export default function Skills() {
   return (
     <section id="skills" className="py-24 bg-slate-50 dark-2">
       <div className="container mx-auto px-6">
-        <motion.h2 
+        <motion.h2
           className="text-3xl md:text-4xl font-bold text-center mb-10 text-slate-800 dark:text-white"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: false, amount: 0.5 }}
           transition={{ duration: 0.5 }}
         >
-           Skills
+          Skills
         </motion.h2>
 
         <div className="space-y-16">
@@ -59,25 +59,27 @@ export default function Skills() {
               <h3 className="text-2xl font-semibold text-center mb-8 text-teal-600 dark:text-teal-400">
                 {categoryItem.category}
               </h3>
-              
-              <motion.div 
+
+              <motion.div
                 className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6"
                 variants={listVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
+                viewport={{ once: false, amount: 0.2 }}
               >
                 {categoryItem.skills.map((skill) => (
-                  <motion.div 
-                    key={skill.name} 
+                  <motion.div
+                    key={skill.name}
                     className="flex flex-col items-center justify-center p-6 bg-white dark:bg-slate-800 rounded-xl shadow-md hover:shadow-xl hover:shadow-teal-400/20 dark:hover:shadow-teal-500/30 transition-shadow duration-300"
                     variants={itemVariants}
+                    viewport={{ once: false, amount: 0.5 }}
                     whileHover={{ y: -5, scale: 1.05 }}
                   >
                     <motion.div
-                      animate={{ y: [0, -5, 0] }} 
+                      viewport={{ once: false, amount: 0.5 }}
+                      animate={{ y: [0, -5, 0] }}
                       transition={{
-                        duration: 2 + Math.random() * 3, 
+                        duration: 2 + Math.random() * 3,
                         repeat: Infinity,
                         repeatType: "loop",
                         ease: "easeInOut",
