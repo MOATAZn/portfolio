@@ -92,7 +92,7 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="py-24 bg-white dark:bg-slate-800/50">
+    <section id="projects" className="py-24 bg-white dark-3">
       <div className="container mx-auto px-6">
         <motion.h2
           className="text-3xl md:text-4xl font-bold text-center mb-16 text-slate-800 dark:text-white"
