@@ -16,9 +16,25 @@ const projectsData = [
       ],
     tags: ["Angular", "PrimeNG", "ApexCharts", "API Integration"],
     liveLink: "https://watansooq.com/home",
-    repoLink: "private",
+    repoLink: "https://github.com/MOATAZn/watantest-new-repo.git",
   },
+
   {
+    title: "Divido –  Real Estate Investment Platform",
+    description:
+      "Divido is a bilingual, fully responsive real estate investment platform built with React and Tailwind CSS. It features seamless English/Arabic support, RTL layout, and animated, interactive UI for browsing and investing in properties.",
+    images: [
+      "src/assets/images/Divido/1.png",
+      "src/assets/images/Divido/2.png",
+      "src/assets/images/Divido/3.png",
+      "src/assets/images/Divido/4.png"
+    ]
+    ,
+    tags: ["React", "Tailwind CSS", "Framer Motion", "Gsap", "Vite"],
+    liveLink: "https://divido.vercel.app/",
+    repoLink: "https://github.com/MOATAZn/Divido.git",
+  },
+    {
     title: "React & Tailwind Portfolio",
     description:
       "This portfolio itself! A fully responsive, interactive website built from scratch using modern frontend technologies. Features a dark/light mode, smooth animations, and a clean, reusable component structure.",

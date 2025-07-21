@@ -4,15 +4,47 @@ import { motion } from 'framer-motion';
 
 export default function Hero() {
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.3 } },
-  };
+ const containerVariants = {
+  hidden: { opacity: 0, x: -100, y: -100 }, 
+  visible: {
+    opacity: 1,
+    x: 0,
+    y: 0,
+    transition: {
+      type: 'tween',
+      duration: 0.5, 
+      ease: 'easeOut',
+      when: 'beforeChildren', 
+      staggerChildren: 0.3,   
+    },
+  },
+};
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 100 },
-    visible: { opacity: 1, y: 0, transition: { duration: 2, ease: 'easeOut' } },
-  };
+const itemVariants = {
+  hidden: { opacity: 0, y: 100 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: 'spring',
+      stiffness: 100,
+      damping: 10,
+    },
+  },
+};
+const item = {
+  hidden: { opacity: 0, y: 100 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: 'spring',
+      stiffness: 100,
+      damping: 10,
+    },
+  },
+};
+
 
   const handleSmoothScroll = (e, targetId) => {
     e.preventDefault();
@@ -38,7 +70,7 @@ export default function Hero() {
 
           <motion.h1
             className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-slate-800 dark:text-white leading-tight mb-4"
-            variants={itemVariants}
+            variants={item}
           >
             Hi, I'm Moataz Ibrahim — a passionate Frontend Developer crafting interactive, modern web experiences.
           </motion.h1>
